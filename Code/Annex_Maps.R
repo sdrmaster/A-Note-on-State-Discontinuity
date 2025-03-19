@@ -1,5 +1,5 @@
 # List of required packages
-required_packages <- c("ggplot2", "readxl", "dplyr", "sf", "ggpubr")
+required_packages <- c("dplyr", "ggplot2", "ggpubr", "readxl", "sf")
 # Install missing packages
 for (pkg in required_packages) {
   if (!requireNamespace(pkg, quietly = TRUE)) {
@@ -79,7 +79,6 @@ for (code in country_codes) {
          x = NULL, 
          y = NULL) + 
     theme_minimal() +
-    #Add state labels
     #Add state labels
     geom_text(data = label_data, aes(x = x, y = y, label = ADMIN_NAME), color = ifelse(merged_density_sf$decile %in% c("Decile 7", "Decile 8", "Decile 9", "Decile 10"), "white", "black"),
               size = 2, nudge_y = 0.1, check_overlap = TRUE) +

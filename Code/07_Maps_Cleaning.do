@@ -23,7 +23,7 @@ replace region="Goias" if (region=="Goiás" & countryname=="Brazil")
 *Mozambique 
 replace region="Cidade De Maputo" if (region=="Maputo city" & countryname=="Mozambique")
 replace region="Maputo" if (region=="Maputo province" & countryname=="Mozambique")
-*Countrycode
+*Country code
 gen isoc="geo1_am2001" if countryname=="Armenia"
 replace isoc="geo1_bj2013" if countryname=="Benin"
 replace isoc="geo1_br2010" if countryname=="Brazil"
@@ -37,6 +37,7 @@ replace isoc="geo1_mz2007" if countryname=="Mozambique"
 *Exporting results
 export excel using "${do2}density_maps.xlsx", firstrow (variables) replace
 
+*Effectiveness
 * Define the list of indicators
 local indicators "child_surv literate_perc no_violence yes_electric yes_watsup"
 * Loop through each indicator
@@ -64,7 +65,7 @@ replace region="Goias" if (region=="Goiás" & countryname=="Brazil")
 *Mozambique 
 replace region="Cidade De Maputo" if (region=="Maputo city" & countryname=="Mozambique")
 replace region="Maputo" if (region=="Maputo province" & countryname=="Mozambique")
-*Countrycode
+*Country code
 gen isoc="geo1_am2001" if countryname=="Armenia"
 replace isoc="geo1_bj2013" if countryname=="Benin"
 replace isoc="geo1_br2010" if countryname=="Brazil"

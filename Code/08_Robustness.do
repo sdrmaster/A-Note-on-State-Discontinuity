@@ -89,7 +89,6 @@ restore
 local theta "5 10 20"
 foreach t of local theta{
  	local theta_`t'_10 = `t' / 10
-	gen value_norm_`t' =  value_norm^(`theta_`t'_10')
 	gen value_norm_`t'_w = value_norm^(`theta_`t'_10') * (1/`count_ind_num')
 	bysort region_code: egen test_`t' = total(value_norm_`t'_w ) 
 	gen density_`t' = test_`t' ^ ((`theta_`t'_10')^(-1)) 
@@ -223,7 +222,6 @@ restore
 local theta "5 10 20"
 foreach t of local theta{
  	local theta_`t'_10 = `t' / 10
-	gen value_norm_`t' =  value_norm^(`theta_`t'_10')
 	gen value_norm_`t'_w = value_norm^(`theta_`t'_10') * (1/`count_ind_num')
 	bysort region_code: egen test_`t' = total(value_norm_`t'_w ) 
 	gen density_`t' = test_`t' ^ ((`theta_`t'_10')^(-1)) 
@@ -352,7 +350,6 @@ restore
 local theta "5 10 20"
 foreach t of local theta{
  	local theta_`t'_10 = `t' / 10
-	gen value_norm_`t' =  value_norm^(`theta_`t'_10')
 	gen value_norm_`t'_w = value_norm^(`theta_`t'_10') * (1/`count_ind_num')
 	bysort region_code: egen test_`t' = total(value_norm_`t'_w ) 
 	gen density_`t' = test_`t' ^ ((`theta_`t'_10')^(-1)) 
@@ -481,7 +478,6 @@ restore
 local theta "5 10 20"
 foreach t of local theta{
  	local theta_`t'_10 = `t' / 10
-	gen value_norm_`t' =  value_norm^(`theta_`t'_10')
 	gen value_norm_`t'_w = value_norm^(`theta_`t'_10') * (1/`count_ind_num')
 	bysort region_code: egen test_`t' = total(value_norm_`t'_w ) 
 	gen density_`t' = test_`t' ^ ((`theta_`t'_10')^(-1)) 
@@ -612,7 +608,6 @@ restore
 local theta "5 10 20"
 foreach t of local theta{
  	local theta_`t'_10 = `t' / 10
-	gen value_norm_`t' =  value_norm^(`theta_`t'_10')
 	gen value_norm_`t'_w = value_norm^(`theta_`t'_10') * (1/`count_ind_num')
 	bysort region_code: egen test_`t' = total(value_norm_`t'_w ) 
 	gen density_`t' = test_`t' ^ ((`theta_`t'_10')^(-1)) 
@@ -684,24 +679,6 @@ restore
 local ++n
 } // n
 file close Discontinuity_`l'
-
-
-/*
-* 1)
-keep if indicator_vector=="child_surv" | indicator_vector=="literate_perc" | indicator_vector=="yes_electric" | indicator_vector=="yes_watsup"
-
-* 2)
-keep if indicator_vector=="child_surv" | indicator_vector=="literate_perc" | indicator_vector=="yes_electric" |  indicator_vector=="no_violence"
-
-* 3)
-keep if indicator_vector=="child_surv" | indicator_vector=="literate_perc" |  indicator_vector=="yes_watsup"| indicator_vector=="no_violence"
-
-* 4)
-keep if indicator_vector=="child_surv" |  indicator_vector=="yes_electric" | indicator_vector=="yes_watsup"| indicator_vector=="no_violence"
-
-* 5)
-keep if  indicator_vector=="literate_perc" | indicator_vector=="yes_electric" | indicator_vector=="yes_watsup"| indicator_vector=="no_violence"
-*/
 
 
 * Analysis
@@ -806,7 +783,14 @@ rename rank_ rank
 bumpline rank excluded_var_code if theta==5, 
 	by(countryname) scheme(white_tableau)  
 	xlabel(1 2 3 4 5 , valuelabel)
-	yscale(reverse);
+	ylabel(1 "1" 2 "2" 3 "3" 4 "4" 5 "5"
+       6 "6" 7 "7" 8 "8" 9 "9" 10 "10"
+       11 "11" 12 "12" 13 "13" 14 "14" 15 "15"
+       16 "16" 17 "17" 18 "18" 19 "19" 20 "20"
+       21 "21" 22 "22" 23 "23" 24 "24" 25 "25"
+       26 "26" 27 "27" 28 "28" 29 "29" 30 "30"
+       31 "31" 32 "32", angle(0))
+		yscale(reverse);
 #delimit cr
 *Figure 5(a)
 graph export "${fig}fig5_bumpgraph_robust_05.png", as(png) replace
@@ -816,6 +800,13 @@ graph export "${fig}fig5_bumpgraph_robust_05.png", as(png) replace
 bumpline rank excluded_var_code if theta==10, 
 	by(countryname) scheme(white_tableau)  
 	xlabel(1 2 3 4 5, valuelabel)
+		ylabel(1 "1" 2 "2" 3 "3" 4 "4" 5 "5"
+       6 "6" 7 "7" 8 "8" 9 "9" 10 "10"
+       11 "11" 12 "12" 13 "13" 14 "14" 15 "15"
+       16 "16" 17 "17" 18 "18" 19 "19" 20 "20"
+       21 "21" 22 "22" 23 "23" 24 "24" 25 "25"
+       26 "26" 27 "27" 28 "28" 29 "29" 30 "30"
+       31 "31" 32 "32", angle(0))
 		yscale(reverse);
 #delimit cr
 *Figure 5(b)
@@ -826,6 +817,14 @@ graph export "${fig}fig5_bumpgraph_robust_1.png", as(png) replace
 bumpline rank excluded_var_code if theta==20, 
 	by(countryname) scheme(white_tableau)  
 	xlabel(1 2 3 4 5 , valuelabel)
+		ylabel(1 "1" 2 "2" 3 "3" 4 "4" 5 "5"
+       6 "6" 7 "7" 8 "8" 9 "9" 10 "10"
+       11 "11" 12 "12" 13 "13" 14 "14" 15 "15"
+       16 "16" 17 "17" 18 "18" 19 "19" 20 "20"
+       21 "21" 22 "22" 23 "23" 24 "24" 25 "25"
+       26 "26" 27 "27" 28 "28" 29 "29" 30 "30"
+       31 "31" 32 "32", angle(0))
+	xlabel(1 2 3 4 5, valuelabel)
 		yscale(reverse);
 #delimit cr
 *Figure 5(c)

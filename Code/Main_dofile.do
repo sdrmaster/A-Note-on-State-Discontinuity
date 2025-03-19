@@ -5,7 +5,7 @@ clear all
 set more off // Prevent pauses during execution
 
 //Installing packages only when they are needed
-local packages "wbopendata asdoc estout bumpline palettes colrspace alluvial sankey"
+local packages "alluvial asdoc bumpline colrspace estout palettes sankey tabout wbopendata "
 foreach pkg in `packages' {
     cap which `pkg'
     if _rc {

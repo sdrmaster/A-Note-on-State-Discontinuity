@@ -1,5 +1,6 @@
 clear all
 
+*Import Effectiveness dataset
 preserve
 use "${do2}Effectiveness.dta", clear
 gen id=1
@@ -89,7 +90,7 @@ reshape long discontinuity_ rank_, i(countryname countrycode adminregion) j(thet
 replace theta = 15 if theta==20
 
 *Figure 4
-bumpline rank_ theta, by(countryname) scheme(white_tableau) xlabel(5 "0.5" 10 "1" 15 "2") xtitle("value of theta")
+bumpline rank_ theta, by(countryname) scheme(white_tableau) xlabel(5 "0.5" 10 "1" 15 "2") xtitle("value of theta") ylabel(, angle(0))
 graph export "${fig}fig4_Bumpgraph_Discontinuity.png", as(png) replace
 
 
@@ -152,6 +153,7 @@ label var density_pc_10 "theta=1"
 alluvial density_pc_5  density_pc_10 density_pc_20,
 gap(0);
 #delimit cr
+*Figure 3
 graph export "${fig}fig3.png", as(png) replace
 
 local theta "5 10 20"
@@ -191,19 +193,11 @@ foreach v of local var{
 sort adminregion countryname admin1 pc_*
 br adminregion countryname admin1 pc_*
 
-log using "${do2}text_numbers.txt", text replace name(my_results)
-
+cap erase "${tab}text_numbers.tex" 
 local var "child_surv literate_perc no_violence yes_electric yes_watsup"
 foreach v in `var' {
-    di "============================================="
-    di "The indicator is `v'"
-    di "============================================="
-    tab adminregion pc_`v' if pc_`v'==1, nof col  
+    tabout adminregion pc_`v' if pc_`v'==1 using "${tab}text_numbers.tex", append cells(freq col)  
 }
-
-log close my_results
-*In text numbers page 13-14
-type "${do2}text_numbers.txt"  
 
 
 *-------------------------------------------------------------------------------
