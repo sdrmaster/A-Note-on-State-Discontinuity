@@ -1,0 +1,168 @@
+{\rtf1\ansi\deff0 {\fonttbl{\f0\fnil Garamond;}}
+{\info {\author .}{\company .}{\title .}}
+\deflang1033\plain\fs20
+{\footer\pard\qc\plain\f0\fs20\chpgn\par}
+{
+{\b\qc\line Pairwise correlations }{\par}
+{\trowd\trgaph108\trleft-108
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw15\brdrs\cellx1708
+\fs20\pard\intbl\ql {{Variables}}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw15\brdrs\cellx2562
+\fs20\pard\intbl\qr {{(1)}}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw15\brdrs\cellx3416
+\fs20\pard\intbl\qr {{(2)}}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw15\brdrs\cellx4270
+\fs20\pard\intbl\qr {{(3)}}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw15\brdrs\cellx5124
+\fs20\pard\intbl\qr {{(4)}}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw15\brdrs\cellx5978
+\fs20\pard\intbl\qr {{(5)}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx1708
+\fs20\pard\intbl\ql {{(1) Area}}\cell
+\cellx2562
+\fs20\pard\intbl\qr {{1.000}}\cell
+\cellx3416
+\fs20\pard\intbl\qr {{\i}}\cell
+\cellx4270
+\fs20\pard\intbl\qr {{\i}}\cell
+\cellx5124
+\fs20\pard\intbl\qr {{\i}}\cell
+\cellx5978
+\fs20\pard\intbl\qr {{\i}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx1708
+\fs20\pard\intbl\ql {{\i}}\cell
+\cellx2562
+\fs20\pard\intbl\qr {{\i}}\cell
+\cellx3416
+\fs20\pard\intbl\qr {{\i}}\cell
+\cellx4270
+\fs20\pard\intbl\qr {{\i}}\cell
+\cellx5124
+\fs20\pard\intbl\qr {{\i}}\cell
+\cellx5978
+\fs20\pard\intbl\qr {{\i}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx1708
+\fs20\pard\intbl\ql {{(2) Foreign}}\cell
+\cellx2562
+\fs20\pard\intbl\qr {{-0.102}}\cell
+\cellx3416
+\fs20\pard\intbl\qr {{1.000}}\cell
+\cellx4270
+\fs20\pard\intbl\qr {{\i}}\cell
+\cellx5124
+\fs20\pard\intbl\qr {{\i}}\cell
+\cellx5978
+\fs20\pard\intbl\qr {{\i}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx1708
+\fs20\pard\intbl\ql {{\i}}\cell
+\cellx2562
+\fs20\pard\intbl\qr {{(0.172)}}\cell
+\cellx3416
+\fs20\pard\intbl\qr {{\i}}\cell
+\cellx4270
+\fs20\pard\intbl\qr {{\i}}\cell
+\cellx5124
+\fs20\pard\intbl\qr {{\i}}\cell
+\cellx5978
+\fs20\pard\intbl\qr {{\i}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx1708
+\fs20\pard\intbl\ql {{(3) Indigenous}}\cell
+\cellx2562
+\fs20\pard\intbl\qr {{-0.132}}\cell
+\cellx3416
+\fs20\pard\intbl\qr {{-0.105}}\cell
+\cellx4270
+\fs20\pard\intbl\qr {{1.000}}\cell
+\cellx5124
+\fs20\pard\intbl\qr {{\i}}\cell
+\cellx5978
+\fs20\pard\intbl\qr {{\i}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx1708
+\fs20\pard\intbl\ql {{\i}}\cell
+\cellx2562
+\fs20\pard\intbl\qr {{(0.076)}}\cell
+\cellx3416
+\fs20\pard\intbl\qr {{(0.161)}}\cell
+\cellx4270
+\fs20\pard\intbl\qr {{\i}}\cell
+\cellx5124
+\fs20\pard\intbl\qr {{\i}}\cell
+\cellx5978
+\fs20\pard\intbl\qr {{\i}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx1708
+\fs20\pard\intbl\ql {{(4) Population}}\cell
+\cellx2562
+\fs20\pard\intbl\qr {{-0.038}}\cell
+\cellx3416
+\fs20\pard\intbl\qr {{-0.006}}\cell
+\cellx4270
+\fs20\pard\intbl\qr {{-0.028}}\cell
+\cellx5124
+\fs20\pard\intbl\qr {{1.000}}\cell
+\cellx5978
+\fs20\pard\intbl\qr {{\i}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx1708
+\fs20\pard\intbl\ql {{\i}}\cell
+\cellx2562
+\fs20\pard\intbl\qr {{(0.608)}}\cell
+\cellx3416
+\fs20\pard\intbl\qr {{(0.938)}}\cell
+\cellx4270
+\fs20\pard\intbl\qr {{(0.708)}}\cell
+\cellx5124
+\fs20\pard\intbl\qr {{\i}}\cell
+\cellx5978
+\fs20\pard\intbl\qr {{\i}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx1708
+\fs20\pard\intbl\ql {{(5) Urban}}\cell
+\cellx2562
+\fs20\pard\intbl\qr {{0.260}}\cell
+\cellx3416
+\fs20\pard\intbl\qr {{0.060}}\cell
+\cellx4270
+\fs20\pard\intbl\qr {{-0.316}}\cell
+\cellx5124
+\fs20\pard\intbl\qr {{0.153}}\cell
+\cellx5978
+\fs20\pard\intbl\qr {{1.000}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx1708
+\fs20\pard\intbl\ql {{\i}}\cell
+\cellx2562
+\fs20\pard\intbl\qr {{(0.000)}}\cell
+\cellx3416
+\fs20\pard\intbl\qr {{(0.419)}}\cell
+\cellx4270
+\fs20\pard\intbl\qr {{(0.000)}}\cell
+\cellx5124
+\fs20\pard\intbl\qr {{(0.040)}}\cell
+\cellx5978
+\fs20\pard\intbl\qr {{\i}}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\clbrdrt\brdrw15\brdrs\cellx5978
+\fs20\pard\intbl\ql {}\cell
+\row}
+
+
+\writepositionforappend
+}}
