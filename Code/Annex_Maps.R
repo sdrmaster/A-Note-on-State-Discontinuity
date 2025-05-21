@@ -104,7 +104,7 @@ for (code in country_codes) {
     } else if (code == "geo1_ht2003") {
       labs(title = "Haiti") 
     } else if (code == "geo1_la2005") {
-      labs(title = "Laos") 
+      labs(title = "Lao PDR") 
     } else if (code == "geo1_ml2009") {
       labs(title = "Mali") 
     } else {

@@ -90,7 +90,7 @@ reshape long discontinuity_ rank_, i(countryname countrycode adminregion) j(thet
 replace theta = 15 if theta==20
 
 *Figure 4
-bumpline rank_ theta, by(countryname) scheme(white_tableau) xlabel(5 "0.5" 10 "1" 15 "2") xtitle("value of theta") ylabel(, angle(0))
+bumpline rank_ theta, by(countryname) scheme(white_tableau) xlabel(5 "0.5" 10 "1" 15 "2") xtitle("value of theta") ylabel(, angle(0)) top(32) ytitle("")
 graph export "${fig}fig4_Bumpgraph_Discontinuity.png", as(png) replace
 
 

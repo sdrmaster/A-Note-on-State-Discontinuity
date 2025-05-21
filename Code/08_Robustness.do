@@ -746,7 +746,7 @@ order countryname discontinuity_5_1 discontinuity_5_2 discontinuity_5_3 disconti
 *Table A3 (from the Appendix)
 export delimited using "${annex_tab}tabA3_discontinuity_robust_check.csv", replace 
 *-------------------------------------------------------------------------------
-* Create Figures for Robusness Checks
+* Create Figures for Robustness Checks
 *-------------------------------------------------------------------------------
 use "${do2}Discontinuity_Robusness_Check.dta", clear
 keep countryname rank*
@@ -778,19 +778,18 @@ replace excluded_var_code = 5 if excluded_var=="security"
 label define excluded_var 1"water" 2"electricity" 3"education" 4"health" 5"security"
 label values excluded_var_code excluded_var
 
+local ylbls
+forvalues i = 1/32 {
+    local ylbls `ylbls' `i' "`i'"
+}
+
 rename rank_ rank
 #delimit;
 bumpline rank excluded_var_code if theta==5, 
 	by(countryname) scheme(white_tableau)  
-	xlabel(1 2 3 4 5 , valuelabel)
-	ylabel(1 "1" 2 "2" 3 "3" 4 "4" 5 "5"
-       6 "6" 7 "7" 8 "8" 9 "9" 10 "10"
-       11 "11" 12 "12" 13 "13" 14 "14" 15 "15"
-       16 "16" 17 "17" 18 "18" 19 "19" 20 "20"
-       21 "21" 22 "22" 23 "23" 24 "24" 25 "25"
-       26 "26" 27 "27" 28 "28" 29 "29" 30 "30"
-       31 "31" 32 "32", angle(0))
-		yscale(reverse);
+	xlabel(1(1)5, valuelabel)
+	ylabel(`ylbls', angle(0))
+		yscale(reverse) top(32) xtitle("excluded dimension") ytitle("");
 #delimit cr
 *Figure 5(a)
 graph export "${fig}fig5_bumpgraph_robust_05.png", as(png) replace
@@ -800,14 +799,8 @@ graph export "${fig}fig5_bumpgraph_robust_05.png", as(png) replace
 bumpline rank excluded_var_code if theta==10, 
 	by(countryname) scheme(white_tableau)  
 	xlabel(1 2 3 4 5, valuelabel)
-		ylabel(1 "1" 2 "2" 3 "3" 4 "4" 5 "5"
-       6 "6" 7 "7" 8 "8" 9 "9" 10 "10"
-       11 "11" 12 "12" 13 "13" 14 "14" 15 "15"
-       16 "16" 17 "17" 18 "18" 19 "19" 20 "20"
-       21 "21" 22 "22" 23 "23" 24 "24" 25 "25"
-       26 "26" 27 "27" 28 "28" 29 "29" 30 "30"
-       31 "31" 32 "32", angle(0))
-		yscale(reverse);
+	ylabel(`ylbls', angle(0))
+		yscale(reverse) top(32) xtitle("excluded dimension") ytitle("");
 #delimit cr
 *Figure 5(b)
 graph export "${fig}fig5_bumpgraph_robust_1.png", as(png) replace
@@ -817,15 +810,8 @@ graph export "${fig}fig5_bumpgraph_robust_1.png", as(png) replace
 bumpline rank excluded_var_code if theta==20, 
 	by(countryname) scheme(white_tableau)  
 	xlabel(1 2 3 4 5 , valuelabel)
-		ylabel(1 "1" 2 "2" 3 "3" 4 "4" 5 "5"
-       6 "6" 7 "7" 8 "8" 9 "9" 10 "10"
-       11 "11" 12 "12" 13 "13" 14 "14" 15 "15"
-       16 "16" 17 "17" 18 "18" 19 "19" 20 "20"
-       21 "21" 22 "22" 23 "23" 24 "24" 25 "25"
-       26 "26" 27 "27" 28 "28" 29 "29" 30 "30"
-       31 "31" 32 "32", angle(0))
-	xlabel(1 2 3 4 5, valuelabel)
-		yscale(reverse);
+	ylabel(`ylbls', angle(0))
+		yscale(reverse) top(32) xtitle("excluded dimension") ytitle("");
 #delimit cr
 *Figure 5(c)
 graph export "${fig}fig5_bumpgraph_robust_2.png", as(png) replace
